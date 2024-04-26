@@ -10,6 +10,8 @@ import AllTouristsSpot from './pages/AllTouristsSpot';
 import AddTouristsSpot from './pages/AddTouristsSpot';
 import MyList from './pages/MyList';
 import Home from './components/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: '/myList',
         element: <MyList></MyList>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },

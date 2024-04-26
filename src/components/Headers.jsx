@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Headers = () => {
@@ -38,8 +38,12 @@ const Headers = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <Link to='/login'>
                 <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Login</a>
+                </Link>
+                <Link to='/register'>
                 <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Register</a>
+                </Link>
             </div>
         </div>
     );
