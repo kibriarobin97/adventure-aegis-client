@@ -75,10 +75,10 @@ const Headers = () => {
                         :
                         <div>
                             <Link to='/login'>
-                                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Login</a>
+                                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-500">Login</a>
                             </Link>
                             <Link to='/register'>
-                                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Register</a>
+                                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-500">Register</a>
                             </Link>
                         </div>
                 }

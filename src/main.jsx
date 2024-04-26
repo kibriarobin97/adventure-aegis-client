@@ -23,11 +23,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
         element: <Home></Home>,
-        errorElement: <ErrorPage></ErrorPage>,
         loader: () => fetch('http://localhost:5000/spot')
       },
       {

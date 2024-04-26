@@ -43,6 +43,7 @@ const AddTouristsSpot = () => {
                     confirmButtonText: 'ok'
                   })
             }
+            form.reset()
         })
     }
 
@@ -91,7 +92,7 @@ const AddTouristsSpot = () => {
                             <textarea id="bio" name="description" placeholder="Description" className="w-full p-1 rounded-md focus:ring focus:ring-opacity-75 dark:text-black focus:dark:ring-violet-600 dark:border-gray-300"></textarea>
                         </div>
                         <div className="col-span-full">
-                            <input type="submit" className="btn btn-block bg-orange-400 text-white hover:bg-orange-600 duration-400" value="Add" />
+                            <input type="submit" className="btn btn-block bg-orange-400 text-white hover:bg-orange-600 duration-500" value="Add" />
                         </div>
                     </div>
                 </fieldset>
