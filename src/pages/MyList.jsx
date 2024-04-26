@@ -2,7 +2,7 @@
 
 const MyList = () => {
     return (
-        <div>
+        <div className="min-h-[calc(100vh-353px)]">
             <h3>myList</h3>
         </div>
     );

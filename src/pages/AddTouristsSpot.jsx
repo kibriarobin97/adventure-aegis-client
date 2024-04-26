@@ -47,7 +47,7 @@ const AddTouristsSpot = () => {
     }
 
     return (
-        <section className="p-6 text-gray-500">
+        <section className="p-6 text-gray-500 min-h-[calc(100vh-353px)]">
             <form
                 onSubmit={handleAddSpot}
                 className="container flex flex-col mx-auto space-y-12">
