@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const TouristSpots = () => {
@@ -8,8 +8,7 @@ const TouristSpots = () => {
     return (
         <div>
             <h3 className="text-3xl font-bold text-center mt-16">Tourists Spots</h3>
-            <h3>total items: {loadSpot.length}</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
                 {
                     loadSpot.map(spot => <div key={spot._id}>
                         <div className=" rounded-md shadow-md bg-gray-100 text-black">
@@ -28,7 +27,9 @@ const TouristSpots = () => {
                                     <h2 className="text-2xl font-semibold tracking-wide">{spot.name}</h2>
                                     <p className="text-gray-500 font-medium">{spot.country}</p>
                                 </div>
-                                <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-orange-400 text-white hover:bg-orange-600 duration-400">View Details</button>
+                                <Link to={`/viewDetails/${spot._id}`}>
+                                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-orange-400 text-white hover:bg-orange-600 duration-500">View Details</button>
+                                </Link>
                             </div>
                         </div>
                     </div>)

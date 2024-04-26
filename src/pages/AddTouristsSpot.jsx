@@ -48,6 +48,7 @@ const AddTouristsSpot = () => {
 
     return (
         <section className="p-6 text-gray-500 min-h-[calc(100vh-353px)]">
+            <h3 className="text-3xl text-black underline font-bold text-center mb-5">Add New Tourists Spots</h3>
             <form
                 onSubmit={handleAddSpot}
                 className="container flex flex-col mx-auto space-y-12">
@@ -79,7 +80,7 @@ const AddTouristsSpot = () => {
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="state" className="text-sm text-black font-semibold">Seasonality</label>
-                            <input id="state" name="season" type="text" placeholder="Seasonality" className="w-full p-1 rounded-md focus:ring focus:ring-opacity-75 text-black focus:ring-violet-400 border-gray-700" />
+                            <input id="state" name="season" type="text" placeholder="Season" className="w-full p-1 rounded-md focus:ring focus:ring-opacity-75 text-black focus:ring-violet-400 border-gray-700" />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="zip" className="text-sm text-black font-semibold">Travel Time</label>

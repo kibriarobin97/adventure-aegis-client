@@ -15,6 +15,7 @@ import Register from './pages/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ViewDetails from './pages/ViewDetails';
 
 
 const router = createBrowserRouter([
@@ -25,11 +26,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spots')
+        loader: () => fetch('http://localhost:5000/spot')
+      },
+      {
+        path: '/viewDetails/:id',
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
         path: '/allTouristsSpot',
-        element: <AllTouristsSpot></AllTouristsSpot>
+        element: <AllTouristsSpot></AllTouristsSpot>,
+        loader: () => fetch('http://localhost:5000/spots')
       },
       {
         path: '/addTouristsSpot',
