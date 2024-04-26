@@ -1,20 +1,38 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import defaultPhoto from "../assets/user.png"
 
 
 const Headers = () => {
 
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                toast.success("Successfully Logout", { position: "top-center" })
+            })
+            .catch(error => {
+                toast.error(error.message, { position: "top-center" })
+            })
+    }
+
     const navLinks = <>
         <NavLink to='/'
-        className={({isActive}) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold" }
+            className={({ isActive }) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold"}
         >Home</NavLink>
         <NavLink to='/allTouristsSpot'
-        className={({isActive}) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold" }
+            className={({ isActive }) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold"}
         >All Tourists Spot</NavLink>
         <NavLink to='/addTouristsSpot'
-        className={({isActive}) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold" }
+            className={({ isActive }) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold"}
         >Add Tourists Spot</NavLink>
         <NavLink to='/myList'
-        className={({isActive}) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold" }
+            className={({ isActive }) => isActive ? "font-bold bg-orange-400 text-white px-2 py-1 rounded-md" : "font-bold"}
         >My List</NavLink>
     </>
 
@@ -38,12 +56,32 @@ const Headers = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login'>
-                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Login</a>
-                </Link>
-                <Link to='/register'>
-                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Register</a>
-                </Link>
+
+                {
+                    user ?
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img alt="User Photo" src={user?.photoURL || defaultPhoto} />
+                                </div>
+                            </div>
+                            <ul tabIndex={0} className="mt-3 z-10 p-2 shadow menu menu-sm dropdown-content bg-base-300 rounded-box w-32 mx-auto">
+                                <li className="hover:font-bold"><Link to='/userProfile'>
+                                    {user?.displayName ? user.displayName : 'User'}
+                                </Link></li>
+                                <li className="hover:font-bold"><button onClick={handleLogOut}>Logout</button></li>
+                            </ul>
+                        </div>
+                        :
+                        <div>
+                            <Link to='/login'>
+                                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Login</a>
+                            </Link>
+                            <Link to='/register'>
+                                <a className="btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-400">Register</a>
+                            </Link>
+                        </div>
+                }
             </div>
         </div>
     );

@@ -1,11 +1,54 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Register = () => {
 
     const [showPass, setShowPass] = useState(false)
+
+    const { createUser, updateUserProfile } = useContext(AuthContext)
+
+    const navigate = useNavigate()
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget)
+        const name = form.get('name')
+        const photo = form.get('photo')
+        const email = form.get('email')
+        const password = form.get('password')
+
+        const passReg = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+
+        if (password.length < 6) {
+            toast.warn("password should be at least 6 characters or longer", { position: "top-center" })
+            return;
+        }
+
+        if (!passReg.test(password)) {
+            toast.warn("password must be an Uppercase and a Lowercase", { position: "top-center" })
+            return;
+        }
+
+        //create user
+        createUser(email, password)
+            .then(() => {
+                updateUserProfile(name, photo)
+                    .then(() => {
+                        toast.success("Successfully created account", { position: "top-center" })
+                        navigate('/')
+                    })
+
+            })
+            .catch(error => {
+                toast.error(error.message, { position: "top-center" })
+            })
+
+    }
 
     return (
         <div className="max-w-md mx-auto min-h-[calc(100vh-341px)] p-8 space-y-3 rounded-xl text-black">
@@ -14,7 +57,9 @@ const Register = () => {
             </Helmet> */}
             <h1 className="text-2xl font-bold text-center">Register Now</h1>
             <p className="text-sm text-center text-gray-500">Register to create a account</p>
-            <form className="space-y-6">
+            <form 
+            onSubmit={handleRegister}
+            className="space-y-6">
                 <div className="space-y-1 text-sm">
                     <label htmlFor="name" className="block text-black">Name</label>
                     <input type="text" name="name" id="name" required placeholder="Your Name" className="w-full px-4 py-3 rounded-md border-gray-700  text-black focus:border-violet-400" />
