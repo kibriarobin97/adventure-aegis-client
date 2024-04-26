@@ -19,7 +19,7 @@ const MyList = () => {
 
     return (
         <div className="min-h-[calc(100vh-353px)]">
-            <h3 className="text-3xl font-bold text-center my-3">My Added Tourists Spots {spots.length}</h3>
+            <h3 className="text-3xl font-bold text-center my-3">My Added Tourists Spots</h3>
             <div className="container p-2 mx-auto sm:p-4 text-gray-700">
                 <div className="overflow-x-auto">
                     <table className="min-w-full text-xs">
@@ -42,7 +42,7 @@ const MyList = () => {
                             </tr>
                         </thead>
                         {
-                            spots.map((spot, idx) => <tbody key={spot._id}>
+                            spots?.map((spot, idx) => <tbody key={spot._id}>
                             <tr className="border-b border-opacity-20 border-gray-700 bg-gray-100">
                                 <td className="p-3">
                                     <p className="font-semibold">{idx+1}</p>
