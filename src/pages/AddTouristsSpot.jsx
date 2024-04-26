@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddTouristsSpot = () => {
@@ -24,6 +25,25 @@ const AddTouristsSpot = () => {
         const addSpot = {name, country, photo, visitors, location, cost, season, time, description, userName, email}
 
         console.log(addSpot)
+        fetch('http://localhost:5000/spots',{
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(addSpot)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'success!',
+                    text: 'Successfully added this item',
+                    icon: 'success',
+                    confirmButtonText: 'ok'
+                  })
+            }
+        })
     }
 
     return (
