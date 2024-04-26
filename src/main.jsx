@@ -16,6 +16,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ViewDetails from './pages/ViewDetails';
+import ErrorPage from './pages/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+        errorElement: <ErrorPage></ErrorPage>,
         loader: () => fetch('http://localhost:5000/spot')
       },
       {
