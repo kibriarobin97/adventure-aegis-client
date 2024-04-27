@@ -29,7 +29,7 @@ const Adventure = () => {
                 </div>
             </div>
             <div className="space-y-4 p-5">
-                <h2 className="text-3xl font-bold w-2/3">It's time to start your adventure</h2>
+                <h2 className="text-3xl font-bold md:w-2/3">It's time to start your adventure</h2>
                 <p className="font-medium text-gray-700 text-opacity-60">It's time to start your adventure with Adventure Aegis. Whether you're craving an adrenaline-fueled escapade, a cultural immersion, or a serene journey through nature's wonders, we're here to turn your dreams into reality. With our expert team of guides, seamless travel arrangements, and unparalleled access to some of the world's most breathtaking destinations, your adventure awaits. So pack your bags, leave your worries behind, and get ready to embark on the journey of a lifetime. It's time to discover new horizons, forge unforgettable memories, and experience the thrill of adventure like never before. Let's make every moment count – it's time to start your adventure with Adventure Aegis. As you stand on the precipice of your next great adventure, anticipation fills the air like electricity. With Adventure Aegis by your side, every moment becomes a possibility waiting to unfold. Whether you're yearning to summit towering peaks, dive into the depths of the ocean, or lose yourself in the rhythm of a bustling metropolis, we're here to guide you every step of the way. Our passion for exploration, commitment to safety, and dedication to creating unforgettable experiences ensure that your journey is not just a destination, but a transformational odyssey.</p>
             </div>
         </div>

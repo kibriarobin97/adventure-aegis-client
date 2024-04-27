@@ -1,4 +1,5 @@
 import Adventure from "./Adventure";
+import NewsLetter from "./NewsLetter";
 import Slider from "./Slider";
 import TouristSpots from "./TouristSpots";
 
@@ -9,6 +10,7 @@ const Home = () => {
             <Slider></Slider>
             <TouristSpots></TouristSpots>
             <Adventure></Adventure>
+            <NewsLetter></NewsLetter>
         </div>
     );
 };
