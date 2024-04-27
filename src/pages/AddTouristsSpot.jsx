@@ -25,7 +25,7 @@ const AddTouristsSpot = () => {
         const addSpot = {name, country, photo, visitors, location, cost, season, time, description, userName, email}
 
         console.log(addSpot)
-        fetch('http://localhost:5000/spots',{
+        fetch('https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots',{
             method: "POST",
             headers: {
                 "content-type": "application/json"

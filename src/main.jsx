@@ -29,17 +29,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spot')
       },
       {
         path: '/viewDetails/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({params}) => fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${params.id}`)
       },
       {
         path: '/allTouristsSpot',
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch('http://localhost:5000/spots')
+        loader: () => fetch('https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots')
       },
       {
         path: '/addTouristsSpot',
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: '/updateSpots/:id',
         element: <UpdateSpots></UpdateSpots>,
-        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({params}) => fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${params.id}`)
       },
       {
         path: '/login',

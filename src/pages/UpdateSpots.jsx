@@ -30,7 +30,7 @@ const UpdateSpots = () => {
         const updateSpot = {name, country, photo, visitors, location, cost, season, time, description, userName, email}
         console.log(updateSpot)
 
-        fetch(`http://localhost:5000/spots/${_id}`, {
+        fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

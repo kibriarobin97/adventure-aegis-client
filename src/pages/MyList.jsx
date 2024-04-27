@@ -11,7 +11,7 @@ const MyList = () => {
     const [spots, setSpots] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/mySpots/${user?.email}`)
+        fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/mySpots/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setSpots(data)
@@ -31,7 +31,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/spots/${_id}`, {
+                fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
