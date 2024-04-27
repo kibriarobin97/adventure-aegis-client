@@ -1,9 +1,16 @@
-import { Link, useLoaderData } from "react-router-dom";
+
+import { Link, useLoaderData, useNavigation } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
 
 const AllTouristsSpot = () => {
 
     const loadSpot = useLoaderData()
+    const navigation = useNavigation()
+
+    if(navigation.state === 'loading'){
+        return <LoadingSpinner></LoadingSpinner>
+    }
 
     return (
         <div className="min-h-[calc(100vh-353px)]">
