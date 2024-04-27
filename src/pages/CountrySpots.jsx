@@ -1,14 +1,18 @@
 
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigation } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
 const CountrySpots = () => {
 
     const loadSpots = useLoaderData()
-    console.log(loadSpots)
+    const navigation = useNavigation()
+
+    if(navigation.state === 'loading'){
+        return <LoadingSpinner></LoadingSpinner>
+    }
 
     return (
         <div className="min-h-[calc(100vh-353px)]">
-            {/* <h3>{loadSpots.length}</h3> */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
                 {
                     loadSpots?.map(spot => <div key={spot?._id}>
