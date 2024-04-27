@@ -18,6 +18,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ViewDetails from './pages/ViewDetails';
 import ErrorPage from './pages/ErrorPage';
 import UpdateSpots from './pages/UpdateSpots';
+import CountrySpots from './pages/CountrySpots';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
         path: '/updateSpots/:id',
         element: <UpdateSpots></UpdateSpots>,
         loader: ({params}) => fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${params.id}`)
+      },
+      {
+        path: '/countries/:country',
+        element: <CountrySpots></CountrySpots>,
+        loader: ({params}) => fetch(`http://localhost:5000/countrySpots/${params.country}`)
       },
       {
         path: '/login',
