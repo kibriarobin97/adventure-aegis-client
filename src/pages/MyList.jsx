@@ -97,13 +97,13 @@ const MyList = () => {
                                     </td>
                                     <td className="p-3">
                                         <Link to={`/updateSpots/${spot?._id}`}>
-                                            <button className="font-semibold">Update</button>
+                                            <button className="font-semibold btn btn-sm bg-orange-400 text-white hover:bg-orange-600 duration-500">Update</button>
                                         </Link>
                                     </td>
                                     <td className="p-3">
                                         <button
                                             onClick={() => handleDelete(spot?._id)}
-                                            className="font-semibold">Delete</button>
+                                            className="font-semibold btn btn-sm bg-red-400 text-white hover:bg-red-600 duration-500">Delete</button>
                                     </td>
                                 </tr>
                             </tbody>)
