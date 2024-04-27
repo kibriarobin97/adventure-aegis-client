@@ -2,7 +2,7 @@
 
 const NewsLetter = () => {
     return (
-        <div className="hero min-h-80 my-5" style={{ backgroundImage: 'url(https://i.ibb.co/yFLFsSk/felfin-felfin-5-MV818tzxeo-unsplash.jpg)' }}>
+        <div className="hero min-h-80 my-10" style={{ backgroundImage: 'url(https://i.ibb.co/yFLFsSk/felfin-felfin-5-MV818tzxeo-unsplash.jpg)' }}>
             <div className="hero-overlay object-cover bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
