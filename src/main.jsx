@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/updateSpots/:id',
-        element: <UpdateSpots></UpdateSpots>,
+        element: <PrivateRoute><UpdateSpots></UpdateSpots></PrivateRoute>,
         loader: ({params}) => fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${params.id}`)
       },
       {
