@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyList = () => {
@@ -95,7 +96,9 @@ const MyList = () => {
                                         <p className="font-semibold">{spot?.time}</p>
                                     </td>
                                     <td className="p-3">
-                                        <button className="font-semibold">Update</button>
+                                        <Link to={`/updateSpots/${spot?._id}`}>
+                                            <button className="font-semibold">Update</button>
+                                        </Link>
                                     </td>
                                     <td className="p-3">
                                         <button

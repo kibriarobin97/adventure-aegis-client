@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ViewDetails from './pages/ViewDetails';
 import ErrorPage from './pages/ErrorPage';
+import UpdateSpots from './pages/UpdateSpots';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path: '/myList',
         element: <PrivateRoute><MyList></MyList></PrivateRoute>
+      },
+      {
+        path: '/updateSpots/:id',
+        element: <UpdateSpots></UpdateSpots>,
+        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
         path: '/login',
