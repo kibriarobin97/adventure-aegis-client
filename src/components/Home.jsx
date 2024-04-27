@@ -1,3 +1,4 @@
+import Adventure from "./Adventure";
 import Slider from "./Slider";
 import TouristSpots from "./TouristSpots";
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div className="min-h-[calc(100vh-353px)]">
             <Slider></Slider>
             <TouristSpots></TouristSpots>
+            <Adventure></Adventure>
         </div>
     );
 };
