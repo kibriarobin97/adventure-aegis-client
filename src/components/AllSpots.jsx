@@ -8,7 +8,7 @@ const AllSpots = ({ spot }) => {
 
     return (
         <div>
-            <div className=" rounded-md shadow-md bg-gray-100 text-black">
+            <div className=" rounded-md shadow-md text-black">
                 <div className="relative">
                     <img src={photo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />
                     <div className="min-w-32 mx-auto text-center absolute top-0">

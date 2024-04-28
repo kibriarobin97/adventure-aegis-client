@@ -30,7 +30,6 @@ const AllTouristsSpot = () => {
     });
 
 
-
     const navigation = useNavigation()
 
     if (navigation.state === 'loading') {

@@ -10,7 +10,7 @@ const ViewDetails = () => {
 
     return (
         <div className="min-h-[calc(100vh-353px)] px-5 mb-5">
-            <div className="w-full mx-auto p-4 shadow-md bg-gray-100">
+            <div className="w-full mx-auto p-4 shadow-md">
                 <div className="space-y-5">
                     <div className="space-y-2">
                         <div className="relative">
