@@ -30,17 +30,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spot')
+        loader: () => fetch('https://adventure-aegis-server.vercel.app/spot')
       },
       {
         path: '/viewDetails/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${params.id}`)
+        loader: ({params}) => fetch(`https://adventure-aegis-server.vercel.app/spots/${params.id}`)
       },
       {
         path: '/allTouristsSpot',
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch('https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots')
+        loader: () => fetch('https://adventure-aegis-server.vercel.app/spots')
       },
       {
         path: '/addTouristsSpot',
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
       {
         path: '/updateSpots/:id',
         element: <PrivateRoute><UpdateSpots></UpdateSpots></PrivateRoute>,
-        loader: ({params}) => fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${params.id}`)
+        loader: ({params}) => fetch(`https://adventure-aegis-server.vercel.app/spots/${params.id}`)
       },
       {
         path: '/countries/:country',
         element: <CountrySpots></CountrySpots>,
-        loader: ({params}) => fetch(`http://localhost:5000/countrySpots/${params.country}`)
+        loader: ({params}) => fetch(`https://adventure-aegis-server.vercel.app/countrySpots/${params.country}`)
       },
       {
         path: '/login',

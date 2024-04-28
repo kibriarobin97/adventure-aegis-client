@@ -75,7 +75,7 @@ const Slider = () => {
                         </div>
                         <div className="text text-white" data-swiper-parallax="-100">
                             <p>
-                            Phong Nha Cave, located in the Quang Binh Province of central Vietnam, is a mesmerizing natural wonder renowned for its stunning limestone formations and underground river system. Part of the Phong Nha-Ke Bang National Park, a UNESCO World Heritage Site, this expansive cave complex offers visitors a journey into the heart of Vietnam's karst landscape.
+                            Phong Nha Cave, located in the Quang Binh Province of central Vietnam, is a mesmerizing natural wonder renowned for its stunning limestone formations and underground river system. Part of the Phong Nha-Ke Bang National Park.
                             </p>
                         </div>
                     </div>

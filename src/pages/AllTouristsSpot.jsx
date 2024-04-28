@@ -39,7 +39,7 @@ const AllTouristsSpot = () => {
     return (
         <div className="min-h-[calc(100vh-353px)]">
             <div className="flex flex-col justify-center items-center">
-                <select value={sortBy} onChange={handleSortChange}>
+                <select value={sortBy} onChange={handleSortChange} className="bg-orange-400 p-2 font-bold rounded-lg">
                     <option className="font-medium" value="">Show All</option>
                     <option className="font-medium" value="ascending">Average Cost (Low to High)</option>
                     <option className="font-medium" value="descending">Average Cost (High to Low)</option>

@@ -5,11 +5,11 @@ import Swal from "sweetalert2";
 
 const UpdateSpots = () => {
 
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const loadSpots = useLoaderData()
-    const {_id, name, country, photo, visitors, location, cost, season, time, description } = loadSpots
-    
+    const { _id, name, country, photo, visitors, location, cost, season, time, description } = loadSpots
+
     const handleUpdateSpot = e => {
         e.preventDefault();
 
@@ -27,28 +27,28 @@ const UpdateSpots = () => {
         const userName = user?.displayName;
         const email = user?.email;
 
-        const updateSpot = {name, country, photo, visitors, location, cost, season, time, description, userName, email}
+        const updateSpot = { name, country, photo, visitors, location, cost, season, time, description, userName, email }
         console.log(updateSpot)
 
-        fetch(`https://adventure-aegis-server-4icsj657e-robins-projects-819ca55a.vercel.app/spots/${_id}`, {
+        fetch(`https://adventure-aegis-server.vercel.app/spots/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(updateSpot)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.modifiedCount > 0){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Spot Updated Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'ok'
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Spot Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'ok'
+                    })
+                }
+            })
     }
 
     return (
@@ -65,7 +65,15 @@ const UpdateSpots = () => {
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label htmlFor="lastname" className="text-sm text-black font-semibold">Country Name</label>
-                            <input id="lastname" name="country" defaultValue={country} type="text" placeholder="Country name" className="w-full rounded-md p-1 focus:ring focus:ring-opacity-75 text-black focus:ring-violet-400 border-gray-700" />
+                            {/* <input id="lastname" name="country" defaultValue={country} type="text" placeholder="Country name" className="w-full rounded-md p-1 focus:ring focus:ring-opacity-75 text-black focus:ring-violet-400 border-gray-700" /> */}
+                            <select name="country" id="" defaultValue={country} className="w-full rounded-md p-1 focus:ring focus:ring-opacity-75 text-black focus:ring-violet-400 border-gray-700">
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Cambodia">Cambodia</option>
+                            </select>
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label htmlFor="email" className="text-sm text-black font-semibold">Photo URL</label>
