@@ -17,7 +17,7 @@ const TouristSpots = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
                 {
                     loadSpot.map(spot => <div key={spot._id}>
-                        <div className=" rounded-md shadow-md text-black">
+                        <div data-aos="fade-up" className=" rounded-md shadow-md text-black">
                             <div className="relative">
                                 <img src={spot.photo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />
                                 <div className="min-w-32 mx-auto text-center absolute top-0">

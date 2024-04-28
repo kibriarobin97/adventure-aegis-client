@@ -7,7 +7,7 @@ const AllSpots = ({ spot }) => {
     const {_id, photo, time, name, country, season, cost} = spot;
 
     return (
-        <div>
+        <div data-aos="fade-up">
             <div className=" rounded-md shadow-md text-black">
                 <div className="relative">
                     <img src={photo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />

@@ -64,7 +64,9 @@ const Headers = () => {
                         {navLinks}
                     </ul>
                 </div>
+                <Link to='/'>
                 <a className="btn btn-ghost text-xl font-bold">Adventure-Aegis</a>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-4">
@@ -88,15 +90,15 @@ const Headers = () => {
                                     <img alt="User Photo" src={user?.photoURL || defaultPhoto} />
                                 </div>
                             </div>
-                            <ul tabIndex={0} className="mt-3 z-10 p-2 shadow menu menu-sm dropdown-content bg-base-300 rounded-box w-32 mx-auto">
-                                <li className="hover:font-bold"><Link to='/userProfile'>
+                            <ul tabIndex={0} className="mt-3 z-10 p-2 shadow menu menu-sm dropdown-content bg-gray-400 rounded-lg w-32 mx-auto">
+                                <li className="hover:font-bold hover:bg-orange-500 rounded-md"><Link to='/myList'>
                                     {user?.displayName ? user.displayName : 'User'}
                                 </Link></li>
-                                <li className="hover:font-bold"><button onClick={handleLogOut}>Logout</button></li>
+                                <li className="hover:font-bold hover:bg-orange-500 rounded-md "><button onClick={handleLogOut}>Logout</button></li>
                             </ul>
                         </div>
                         :
-                        <div>
+                        <div className="flex justify-center items-center">
                             <Link to='/login'>
                                 <a className="btn mr-2 btn-sm border-none bg-orange-400 text-white hover:bg-orange-600 duration-500">Login</a>
                             </Link>

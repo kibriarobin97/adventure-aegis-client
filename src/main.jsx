@@ -19,6 +19,9 @@ import ViewDetails from './pages/ViewDetails';
 import ErrorPage from './pages/ErrorPage';
 import UpdateSpots from './pages/UpdateSpots';
 import CountrySpots from './pages/CountrySpots';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const router = createBrowserRouter([
