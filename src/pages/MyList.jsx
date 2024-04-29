@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link} from "react-router-dom";
-import { Fade } from "react-awesome-reveal";
+
 
 
 const MyList = () => {

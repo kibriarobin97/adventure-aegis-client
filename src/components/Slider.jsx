@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Typewriter, useTypewriter } from 'react-simple-typewriter'
+import { useTypewriter } from 'react-simple-typewriter'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -92,8 +92,8 @@ const Slider = () => {
                 </SwiperSlide>
                 
             </Swiper>
-            <div className='absolute left-20 bottom-28 rounded-lg z-10 bg-gray-500 bg-opacity-70 p-5 md:w-[450px] md:h-56'>
-            <h3 className='text-white  text-3xl font-bold '>Travel with Adventure-Aegis <br /> and Visit... <span className='text-yellow-300 text-opacity-80'>{text}</span></h3>
+            <div className='absolute left-5 bottom-5 md:left-20 md:bottom-28 rounded-lg z-10 md:bg-gray-500 md:bg-opacity-40 p-5 md:w-[450px] md:h-56'>
+            <h3 className='text-white text-xl md:text-3xl font-bold '>Travel with Adventure-Aegis <br /> and Explore... <span className='text-yellow-200 text-opacity-80'>{text}</span></h3>
             </div>
         </div>
     );
