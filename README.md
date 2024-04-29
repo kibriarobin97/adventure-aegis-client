@@ -1,5 +1,6 @@
 ## Website Name: Adventure-Aegis
 ## Live Link: https://adventure-aegis.web.app/
+## Category: Southeast Asia
 ## Features: 
 1. Responsible Navbar.
 2. Attractive slider for visitors.
