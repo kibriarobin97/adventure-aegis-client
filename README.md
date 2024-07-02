@@ -1,6 +1,8 @@
 ## Website Name: Adventure-Aegis
 ## Live Link: https://adventure-aegis.web.app/
-## Category: Southeast Asia
+## Category: Tourist Service
+## Project Overview:
+Adventure-Aegis is a website dedicated to exploring Southeast Asia, providing detailed information and opportunities for travelers. Featuring a responsive navbar and an attractive slider, it offers users the ability to discover and manage their favorite places through authentication. The site prioritizes mobile and tablet responsiveness for ease of access across devices.
 ## Features: 
 1. Responsible Navbar.
 2. Attractive slider for visitors.
@@ -18,3 +20,11 @@
 * Animate.css
 * Swiper slider
 * AOS Package
+
+Technology: 
+  - Tailwind CSS
+  - React.js
+  - Node.js
+  - Express.js
+  - MongoDB
+  - and Firebase Authentication
